@@ -1,0 +1,1252 @@
+<<<<<<< HEAD
+body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #6B4423 0%, #3E2723 100%);
+            color: #fff;
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #D4A574;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #D4A574;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        linear-gradient(135deg, #8B6F47 0%, #6B4423 100%);
+            color: #fff;
+            text-align: center;
+            padding: 8rem 2rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '☕';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #D4A574;
+            color: #2c2c2c;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #C4956A;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 2rem;
+            background: #FFF8F0;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #6B4423;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            color: #5a5a5a;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #8B6F47 0%, #6B4423 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .coffee-icon {
+            font-size: 8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Menu Section */
+        .menu {
+            padding: 5rem 2rem;
+            background: #fff;
+        }
+
+        .menu h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #6B4423;
+            margin-bottom: 3rem;
+        }
+
+        .menu-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background: #FFF8F0;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(107, 68, 35, 0.15);
+            border-color: #D4A574;
+        }
+
+        .menu-item-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5rem;
+            color: #6B4423;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item p {
+            color: #7a7a7a;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            color: #D4A574;
+            font-weight: bold;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 5rem 2rem;
+            background: #FFF8F0;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #6B4423;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            background: linear-gradient(135deg, #8B6F47 0%, #6B4423 100%);
+            border-radius: 15px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .gallery-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-item h3 {
+            color: #fff;
+            font-size: 1.3rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: #fff;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            color: #6B4423;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            background: #FFF8F0;
+            padding: 2rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(107, 68, 35, 0.15);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h3 {
+            color: #6B4423;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #7a7a7a;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #3E2723 0%, #2c1810 100%);
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+
+            .hero {
+                padding: 5rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .hero::before {
+                font-size: 8rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-text h2,
+            .menu h2,
+            .gallery h2,
+            .contact h2 {
+                font-size: 2rem;
+            }
+
+            .menu-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .coffee-icon {
+                font-size: 6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+
+            .about-text h2,
+            .menu h2,
+            .gallery h2,
+            .contact h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-text p {
+                font-size: 1rem;
+            }
+        }
+        const defaultConfig = {
+            background_color: "#FFF8F0",
+            surface_color: "#6B4423",
+            text_color: "#2c2c2c",
+            primary_action_color: "#D4A574",
+            secondary_action_color: "#8B6F47",
+            font_family: "Georgia",
+            font_size: 16,
+            cafe_name: "Cà Phê Sài Gòn",
+            hero_title: "Hương Vị Cà Phê Đích Thực",
+            hero_subtitle: "Nơi mỗi tách cà phê kể một câu chuyện",
+            about_title: "Về Chúng Tôi",
+            about_text: "Chúng tôi tự hào mang đến những tách cà phê được pha chế từ hạt cà phê nguyên chất, rang xay tại chỗ. Với không gian ấm cúng và phong cách phục vụ tận tâm, chúng tôi cam kết mang đến trải nghiệm cà phê tuyệt vời nhất cho bạn.",
+            menu_title: "Thực Đơn Đặc Biệt",
+            footer_text: "© 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu."
+        };
+
+        async function onConfigChange(config) {
+            const backgroundColor = config.background_color || defaultConfig.background_color;
+            const surfaceColor = config.surface_color || defaultConfig.surface_color;
+            const textColor = config.text_color || defaultConfig.text_color;
+            const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
+            const secondaryActionColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+            const customFont = config.font_family || defaultConfig.font_family;
+            const baseSize = config.font_size || defaultConfig.font_size;
+
+            const baseFontStack = 'serif';
+            const fontFamily = `${customFont}, ${baseFontStack}`;
+
+            document.body.style.fontFamily = fontFamily;
+            document.body.style.color = textColor;
+            document.body.style.fontSize = `${baseSize}px`;
+
+            const aboutSection = document.querySelector('about');
+            const gallerySection = document.querySelector('gallery');
+            if (aboutSection) aboutSection.style.background = backgroundColor;
+            if (gallerySection) gallerySection.style.background = backgroundColor;
+
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+            if (header) header.style.background = `linear-gradient(135deg, ${surfaceColor} 0%, 3E2723 100%)`;
+            if (footer) footer.style.background = `linear-gradient(135deg3E2723, # 0%, 2c1810 100%)`;
+
+            const hero = document.querySelector('hero');
+            if (hero) hero.style.background = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), linear-gradient(135deg, ${secondaryActionColor} 0%, ${surfaceColor} 100%)`;
+
+            const aboutImage = document.querySelector('about-image');
+            if (aboutImage) aboutImage.style.background = `linear-gradient(135deg, ${secondaryActionColor} 0%, ${surfaceColor} 100%)`;
+
+            const galleryItems = document.querySelectorAll('gallery-item');
+            galleryItems.forEach(item => {
+                item.style.background = `linear-gradient(135deg, ${secondaryActionColor} 0%, ${surfaceColor} 100%)`;
+            });
+
+            const ctaButton = document.querySelector('cta-button');
+            if (ctaButton) {
+                ctaButton.style.background = primaryActionColor;
+                ctaButton.style.color = textColor;
+            }
+
+            const menuItems = document.querySelectorAll('menu-item');
+            menuItems.forEach(item => {
+                item.style.background = backgroundColor;
+            });
+
+            const contactItems = document.querySelectorAll('contact-item');
+            contactItems.forEach(item => {
+                item.style.background = backgroundColor;
+            });
+
+            const prices = document.querySelectorAll('price');
+            prices.forEach(price => {
+                price.style.color = primaryActionColor;
+            });
+
+            const headings = document.querySelectorAll('.about-text h2, .menu h2, .gallery h2, .contact h2');
+            headings.forEach(heading => {
+                heading.style.color = surfaceColor;
+                heading.style.fontSize = `${baseSize * 2.5}px`;
+            });
+
+            const heroTitle = document.getElementById('hero-title');
+            if (heroTitle) {
+                heroTitle.style.fontSize = `${baseSize * 3.5}px`;
+                heroTitle.textContent = config.cafe_name || defaultConfig.cafe_name;
+            }
+
+            const heroSubtitle = document.getElementById('hero-subtitle');
+            if (heroSubtitle) {
+                heroSubtitle.style.fontSize = `${baseSize * 1.5}px`;
+                heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+            }
+
+            const cafeName = document.getElementById('cafe-name');
+            if (cafeName) {
+                cafeName.textContent = config.cafe_name || defaultConfig.cafe_name;
+            }
+
+            const aboutTitle = document.getElementById('about-title');
+            if (aboutTitle) {
+                aboutTitle.textContent = config.about_title || defaultConfig.about_title;
+            }
+
+            const aboutText = document.getElementById('about-text');
+            if (aboutText) {
+                aboutText.textContent = config.about_text || defaultConfig.about_text;
+                aboutText.style.fontSize = `${baseSize * 1.2}px`;
+            }
+
+            const menuTitle = document.getElementById('menu-title');
+            if (menuTitle) {
+                menuTitle.textContent = config.menu_title || defaultConfig.menu_title;
+            }
+
+            const footerText = document.getElementById('footer-text');
+            if (footerText) {
+                footerText.textContent = config.footer_text || defaultConfig.footer_text;
+            }
+        }
+
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig: defaultConfig,
+                onConfigChange: onConfigChange,
+                mapToCapabilities: (config) => ({
+                    recolorables: [
+                        {
+                            get: () => config.background_color || defaultConfig.background_color,
+                            set: (value) => {
+                                config.background_color = value;
+                                window.elementSdk.setConfig({ background_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.surface_color || defaultConfig.surface_color,
+                            set: (value) => {
+                                config.surface_color = value;
+                                window.elementSdk.setConfig({ surface_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.text_color || defaultConfig.text_color,
+                            set: (value) => {
+                                config.text_color = value;
+                                window.elementSdk.setConfig({ text_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+                            set: (value) => {
+                                config.primary_action_color = value;
+                                window.elementSdk.setConfig({ primary_action_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+                            set: (value) => {
+                                config.secondary_action_color = value;
+                                window.elementSdk.setConfig({ secondary_action_color: value });
+                            }
+                        }
+                    ],
+                    borderables: [],
+                    fontEditable: {
+                        get: () => config.font_family || defaultConfig.font_family,
+                        set: (value) => {
+                            config.font_family = value;
+                            window.elementSdk.setConfig({ font_family: value });
+                        }
+                    },
+                    fontSizeable: {
+                        get: () => config.font_size || defaultConfig.font_size,
+                        set: (value) => {
+                            config.font_size = value;
+                            window.elementSdk.setConfig({ font_size: value });
+                        }
+                    }
+                }),
+                mapToEditPanelValues: (config) => new Map([
+                    ["cafe_name", config.cafe_name || defaultConfig.cafe_name],
+                    ["hero_title", config.hero_title || defaultConfig.hero_title],
+                    ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+                    ["about_title", config.about_title || defaultConfig.about_title],
+                    ["about_text", config.about_text || defaultConfig.about_text],
+                    ["menu_title", config.menu_title || defaultConfig.menu_title],
+                    ["footer_text", config.footer_text || defaultConfig.footer_text]
+                ])
+            });
+=======
+body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #6B4423 0%, #3E2723 100%);
+            color: #fff;
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #D4A574;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #D4A574;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        linear-gradient(135deg, #8B6F47 0%, #6B4423 100%);
+            color: #fff;
+            text-align: center;
+            padding: 8rem 2rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '☕';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #D4A574;
+            color: #2c2c2c;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #C4956A;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 2rem;
+            background: #FFF8F0;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #6B4423;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            color: #5a5a5a;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #8B6F47 0%, #6B4423 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .coffee-icon {
+            font-size: 8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Menu Section */
+        .menu {
+            padding: 5rem 2rem;
+            background: #fff;
+        }
+
+        .menu h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #6B4423;
+            margin-bottom: 3rem;
+        }
+
+        .menu-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background: #FFF8F0;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(107, 68, 35, 0.15);
+            border-color: #D4A574;
+        }
+
+        .menu-item-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5rem;
+            color: #6B4423;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item p {
+            color: #7a7a7a;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            color: #D4A574;
+            font-weight: bold;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 5rem 2rem;
+            background: #FFF8F0;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #6B4423;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            background: linear-gradient(135deg, #8B6F47 0%, #6B4423 100%);
+            border-radius: 15px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .gallery-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-item h3 {
+            color: #fff;
+            font-size: 1.3rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: #fff;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            color: #6B4423;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            background: #FFF8F0;
+            padding: 2rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(107, 68, 35, 0.15);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h3 {
+            color: #6B4423;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #7a7a7a;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #3E2723 0%, #2c1810 100%);
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+
+            .hero {
+                padding: 5rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .hero::before {
+                font-size: 8rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-text h2,
+            .menu h2,
+            .gallery h2,
+            .contact h2 {
+                font-size: 2rem;
+            }
+
+            .menu-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .coffee-icon {
+                font-size: 6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+
+            .about-text h2,
+            .menu h2,
+            .gallery h2,
+            .contact h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-text p {
+                font-size: 1rem;
+            }
+        }
+        const defaultConfig = {
+            background_color: "#FFF8F0",
+            surface_color: "#6B4423",
+            text_color: "#2c2c2c",
+            primary_action_color: "#D4A574",
+            secondary_action_color: "#8B6F47",
+            font_family: "Georgia",
+            font_size: 16,
+            cafe_name: "Cà Phê Sài Gòn",
+            hero_title: "Hương Vị Cà Phê Đích Thực",
+            hero_subtitle: "Nơi mỗi tách cà phê kể một câu chuyện",
+            about_title: "Về Chúng Tôi",
+            about_text: "Chúng tôi tự hào mang đến những tách cà phê được pha chế từ hạt cà phê nguyên chất, rang xay tại chỗ. Với không gian ấm cúng và phong cách phục vụ tận tâm, chúng tôi cam kết mang đến trải nghiệm cà phê tuyệt vời nhất cho bạn.",
+            menu_title: "Thực Đơn Đặc Biệt",
+            footer_text: "© 2024 Cà Phê Sài Gòn. Tất cả quyền được bảo lưu."
+        };
+
+        async function onConfigChange(config) {
+            const backgroundColor = config.background_color || defaultConfig.background_color;
+            const surfaceColor = config.surface_color || defaultConfig.surface_color;
+            const textColor = config.text_color || defaultConfig.text_color;
+            const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
+            const secondaryActionColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+            const customFont = config.font_family || defaultConfig.font_family;
+            const baseSize = config.font_size || defaultConfig.font_size;
+
+            const baseFontStack = 'serif';
+            const fontFamily = `${customFont}, ${baseFontStack}`;
+
+            document.body.style.fontFamily = fontFamily;
+            document.body.style.color = textColor;
+            document.body.style.fontSize = `${baseSize}px`;
+
+            const aboutSection = document.querySelector('about');
+            const gallerySection = document.querySelector('gallery');
+            if (aboutSection) aboutSection.style.background = backgroundColor;
+            if (gallerySection) gallerySection.style.background = backgroundColor;
+
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+            if (header) header.style.background = `linear-gradient(135deg, ${surfaceColor} 0%, 3E2723 100%)`;
+            if (footer) footer.style.background = `linear-gradient(135deg3E2723, # 0%, 2c1810 100%)`;
+
+            const hero = document.querySelector('hero');
+            if (hero) hero.style.background = `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), linear-gradient(135deg, ${secondaryActionColor} 0%, ${surfaceColor} 100%)`;
+
+            const aboutImage = document.querySelector('about-image');
+            if (aboutImage) aboutImage.style.background = `linear-gradient(135deg, ${secondaryActionColor} 0%, ${surfaceColor} 100%)`;
+
+            const galleryItems = document.querySelectorAll('gallery-item');
+            galleryItems.forEach(item => {
+                item.style.background = `linear-gradient(135deg, ${secondaryActionColor} 0%, ${surfaceColor} 100%)`;
+            });
+
+            const ctaButton = document.querySelector('cta-button');
+            if (ctaButton) {
+                ctaButton.style.background = primaryActionColor;
+                ctaButton.style.color = textColor;
+            }
+
+            const menuItems = document.querySelectorAll('menu-item');
+            menuItems.forEach(item => {
+                item.style.background = backgroundColor;
+            });
+
+            const contactItems = document.querySelectorAll('contact-item');
+            contactItems.forEach(item => {
+                item.style.background = backgroundColor;
+            });
+
+            const prices = document.querySelectorAll('price');
+            prices.forEach(price => {
+                price.style.color = primaryActionColor;
+            });
+
+            const headings = document.querySelectorAll('.about-text h2, .menu h2, .gallery h2, .contact h2');
+            headings.forEach(heading => {
+                heading.style.color = surfaceColor;
+                heading.style.fontSize = `${baseSize * 2.5}px`;
+            });
+
+            const heroTitle = document.getElementById('hero-title');
+            if (heroTitle) {
+                heroTitle.style.fontSize = `${baseSize * 3.5}px`;
+                heroTitle.textContent = config.cafe_name || defaultConfig.cafe_name;
+            }
+
+            const heroSubtitle = document.getElementById('hero-subtitle');
+            if (heroSubtitle) {
+                heroSubtitle.style.fontSize = `${baseSize * 1.5}px`;
+                heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+            }
+
+            const cafeName = document.getElementById('cafe-name');
+            if (cafeName) {
+                cafeName.textContent = config.cafe_name || defaultConfig.cafe_name;
+            }
+
+            const aboutTitle = document.getElementById('about-title');
+            if (aboutTitle) {
+                aboutTitle.textContent = config.about_title || defaultConfig.about_title;
+            }
+
+            const aboutText = document.getElementById('about-text');
+            if (aboutText) {
+                aboutText.textContent = config.about_text || defaultConfig.about_text;
+                aboutText.style.fontSize = `${baseSize * 1.2}px`;
+            }
+
+            const menuTitle = document.getElementById('menu-title');
+            if (menuTitle) {
+                menuTitle.textContent = config.menu_title || defaultConfig.menu_title;
+            }
+
+            const footerText = document.getElementById('footer-text');
+            if (footerText) {
+                footerText.textContent = config.footer_text || defaultConfig.footer_text;
+            }
+        }
+
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig: defaultConfig,
+                onConfigChange: onConfigChange,
+                mapToCapabilities: (config) => ({
+                    recolorables: [
+                        {
+                            get: () => config.background_color || defaultConfig.background_color,
+                            set: (value) => {
+                                config.background_color = value;
+                                window.elementSdk.setConfig({ background_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.surface_color || defaultConfig.surface_color,
+                            set: (value) => {
+                                config.surface_color = value;
+                                window.elementSdk.setConfig({ surface_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.text_color || defaultConfig.text_color,
+                            set: (value) => {
+                                config.text_color = value;
+                                window.elementSdk.setConfig({ text_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+                            set: (value) => {
+                                config.primary_action_color = value;
+                                window.elementSdk.setConfig({ primary_action_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+                            set: (value) => {
+                                config.secondary_action_color = value;
+                                window.elementSdk.setConfig({ secondary_action_color: value });
+                            }
+                        }
+                    ],
+                    borderables: [],
+                    fontEditable: {
+                        get: () => config.font_family || defaultConfig.font_family,
+                        set: (value) => {
+                            config.font_family = value;
+                            window.elementSdk.setConfig({ font_family: value });
+                        }
+                    },
+                    fontSizeable: {
+                        get: () => config.font_size || defaultConfig.font_size,
+                        set: (value) => {
+                            config.font_size = value;
+                            window.elementSdk.setConfig({ font_size: value });
+                        }
+                    }
+                }),
+                mapToEditPanelValues: (config) => new Map([
+                    ["cafe_name", config.cafe_name || defaultConfig.cafe_name],
+                    ["hero_title", config.hero_title || defaultConfig.hero_title],
+                    ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+                    ["about_title", config.about_title || defaultConfig.about_title],
+                    ["about_text", config.about_text || defaultConfig.about_text],
+                    ["menu_title", config.menu_title || defaultConfig.menu_title],
+                    ["footer_text", config.footer_text || defaultConfig.footer_text]
+                ])
+            });
+>>>>>>> 39bfe70b0c51d3d1028affcc4306268beb816ec1
+        }
